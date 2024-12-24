@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Recette WEB{% endblock %}</title>
+    <link rel="stylesheet" href="/css/styles.css">
+    {% block stylesheets %}{% endblock %}
+</head>
+<body>
+    <header>
+        <h1>Recette de l'Est</h1>
+        <nav>
+            <ul>
+                <li><a href="/accueil">Accueil</a></li>
+                <li><a href="/ingredient">Ingrédients</a></li>
+                <li><a href="/recipe">Recettes</a></li>
+                <li><a href="/search">Recherche</a></li>
+                <li><a href="/user">Utilisateur</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        {% block body %}{% endblock %}
+    </main>
+    <footer>
+        <p>&copy; 2023 Recette de l'est</p>
+    </footer>
+    
+</body>
+</html>

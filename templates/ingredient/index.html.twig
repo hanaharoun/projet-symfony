@@ -1,0 +1,42 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Ingrédients{% endblock %}
+
+{% block stylesheets %}
+    <style>
+        .ingredient-list {
+            background-color: #ffffff;
+            border: 1px solid #000000;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        .ingredient {
+            background-color: #f0f0f0;
+            border: 1px solid #000000;
+            padding: 15px;
+            margin-bottom: 15px;
+        }
+
+        .btn {
+            background-color: #000000;
+            color: white;
+            padding: 8px 15px;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+    </style>
+{% endblock %}
+
+{% block body %}
+    <div class="ingredient-list">
+        <h2><Ce qu'il faut : ></h2>
+        <ul>
+            <li class="ingredient"><ingredienst 1></li>
+            <li class="ingredient"><ingredient  2></li>
+            <li class="ingredient"><ingredient 3></li>
+        </ul>
+    </div>
+{% endblock %}
+
+

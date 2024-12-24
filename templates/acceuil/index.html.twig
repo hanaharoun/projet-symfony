@@ -1,0 +1,35 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Accueil{% endblock %}
+
+{% block stylesheets %}
+    <style>
+        .welcome-section {
+            background-color: #ffffff;
+            border: 1px solid #000000;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        .btn {
+            background-color: #000000;
+            color: white;
+            padding: 8px 15px;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+    </style>
+{% endblock %}
+
+{% block body %}
+    <div class="welcome-section">
+        <h2><Acceuil Recette de l'est ></h2>
+    </div>
+
+    <div class="recipe">
+        <h3><Rcettee 1></h3>
+        <p><Description></p>
+        <a href="templates/recipe/index.html.twig" class="btn">Voir la recette</a>
+    </div>
+{% endblock %}
+

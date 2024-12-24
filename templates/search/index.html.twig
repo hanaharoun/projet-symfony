@@ -1,0 +1,48 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Recherche{% endblock %}
+
+{% block stylesheets %}
+    <style>
+        .search-section {
+            background-color: #ffffff;
+            border: 1px solid #000000;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        .search-result {
+            background-color: #f0f0f0;
+            border: 1px solid #000000;
+            padding: 15px;
+            margin-bottom: 15px;
+        }
+
+        .btn {
+            background-color: #000000;
+            color: white;
+            padding: 8px 15px;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+    </style>
+{% endblock %}
+
+{% block body %}
+    <div class="search-section">
+        <h2><Rerchercher ></h2>
+        <form action="" method="GET">
+            <input type="text" name="query" placeholder="Rechercher..." required>
+            <button type="submit" class="btn">Rechercher</button>
+        </form>
+    </div>
+
+    <div class="search-results">
+        <h3><Resultat></h3>
+        <div class="search-result">
+            <h4><Receete trouvée ></h4>
+            <a href="#" class="btn">Voir le détail</a>
+        </div>
+    </div>
+{% endblock %}
+

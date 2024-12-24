@@ -1,0 +1,41 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Détails de la Recette{% endblock %}
+
+{% block stylesheets %}
+    <style>
+        .recipe-detail {
+            background-color: #ffffff;
+            border: 1px solid #000000;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        .btn {
+            background-color: #000000;
+            color: white;
+            padding: 8px 15px;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+    </style>
+{% endblock %}
+
+{% block body %}
+    <div class="recipe-detail">
+        <h2>{{ recipe.name }}</h2>
+        <p>{{ recipe.description }}</p>
+        <p>Temps de préparation: {{ recipe.preparationTime }} minutes</p>
+        <p>Portions: {{ recipe.servings }}</p>
+        {% if recipe.image %}
+            <img src="{{ asset('uploads/images/' ~ recipe.image) }}" alt="{{ recipe.name }}">
+        {% endif %}
+        <a href="{{ path('recipe_index') }}" class="btn">Retour à la liste des recettes</a>
+    </div>
+{% endblock %}
+
+{% block javascripts %}
+    <script>
+        console.log("Page de détails de la recette chargée!");
+    </script>
+{% endblock %}

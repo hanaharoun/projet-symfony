@@ -1,0 +1,18 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Créer une Recette{% endblock %}
+
+
+
+{% block body %}
+    <h2>Créer une nouvelle recette</h2>
+    {{ form_start(form) }}
+        {{ form_row(form.name) }}
+        {{ form_row(form.description) }}
+        {{ form_row(form.preparationTime) }}
+        {{ form_row(form.servings) }}
+        {{ form_row(form.imageFile) }}
+        <button type="submit">Enregistrer</button>
+    {{ form_end(form) }}
+{% endblock %}
+

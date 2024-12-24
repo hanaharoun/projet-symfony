@@ -1,0 +1,49 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Liste des Recettes{% endblock %}
+
+{% block stylesheets %}
+    <style>
+        .recipe-list {
+            background-color: #ffffff;
+            border: 1px solid #000000;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        .recipe {
+            background-color: #f0f0f0;
+            border: 1px solid #000000;
+            padding: 15px;
+            margin-bottom: 15px;
+        }
+
+        .btn {
+            background-color: #000000;
+            color: white;
+            padding: 8px 15px;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+    </style>
+{% endblock %}
+
+{% block body %}
+    <h2>Liste des recettes</h2>
+    <ul>
+    {% for recipe in recipes %}
+        <li>
+            <h3>{{ recipe.name }}</h3>
+            <p>{{ recipe.description }}</p>
+            <p>Temps de préparation: {{ recipe.preparationTime }} minutes</p>
+            <p>Portions: {{ recipe.servings }}</p>
+            {% if recipe.image %}
+                <img src="{{ asset('uploads/images/' ~ recipe.image) }}" alt="{{ recipe.name }}">
+            {% endif %}
+            <a href="{{ path('recipe_show', {'id': recipe.id}) }}" class="btn">Voir les détails</a>
+        </li>
+    {% endfor %}
+    </ul>
+{% endblock %}
+
+

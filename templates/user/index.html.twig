@@ -1,0 +1,46 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Utilisateurs{% endblock %}
+
+{% block stylesheets %}
+    <style>
+        .user-section {
+            background-color: #ffffff;
+            border: 1px solid #000000;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        .user {
+            background-color: #f0f0f0;
+            border: 1px solid #000000;
+            padding: 15px;
+            margin-bottom: 15px;
+        }
+
+        .btn {
+            background-color: #000000;
+            color: white;
+            padding: 8px 15px;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+    </style>
+{% endblock %}
+
+{% block body %}
+    <div class="user-section">
+        <h2><!-- Titre de la section des utilisateurs --></h2>
+        <ul>
+            <li class="user"><!-- Nom de l'utilisateur --></li>
+            <li class="user"><!-- Nom de l'utilisateur --></li>
+            <li class="user"><!-- Nom de l'utilisateur --></li>
+        </ul>
+    </div>
+{% endblock %}
+
+{% block javascripts %}
+    <script>
+        console.log("Page des utilisateurs chargée!");
+    </script>
+{% endblock %}
